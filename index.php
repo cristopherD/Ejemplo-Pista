@@ -15,5 +15,9 @@ and open the template in the editor.
         ?>
         <h3>Aplicación que valide a un usuario, le presente un examen de tipo test, el usuario conteste a las preguntas,
             el sistema corrija y puntúe y guarde el examen.</h3>
+        <form action="validalogin.php" method="post">
+Usuario: <input type="text" name="usuario"><br>
+Contaseña: <input type="password" name="pass">
+<input type="submit">
     </body>
 </html>
