@@ -52,3 +52,11 @@ echo '<input type="submit" value="corregir">';
 echo '</FORM>';
 }
 else { echo "Usuario o contraseña incorrecto ";}
+
+echo '<FORM action="calificar.php" method="post">';
+//añadimos información del usuario
+echo "<input type=\"hidden\" name=\"usuario\" value=\"$id\">";
+while ($fila = $result->fetch_assoc()) {
+    <FORM action="calificar.php" method="post">
+<input type="hidden" name="usuario" value="1">
+}
