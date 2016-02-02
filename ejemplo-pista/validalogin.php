@@ -2,7 +2,7 @@
 $usuario = $_REQUEST['usuario'];
 $pass = $_REQUEST['pass'];
 //Conectarnos a la base de datos
-$conexion = new mysqli('localhost', 'root', 'ausias', 'seguridad');
+$conexion = new mysqli('localhost', 'root', 'Ausias', 'seguridad');
 if ($conexion->connect_errno) {
 die("Error de conexion: $conexion->connect_error");
 }
@@ -20,12 +20,9 @@ $validado = TRUE;
 $email=$fila['email'];
 $id_user = $fila['clave_usuario'];
 }
-if($validado){ echo "El usuario $usuario con $email ha entrado en el sistema "; }
-else { echo "Usuario o contraseña incorrecto ";}
+
 $conexion->close();
 
-if($validado){ echo "El usuario $usuario con $email ha entrado en el sistema "; }
-else { echo "Usuario o contraseña incorrecto ";}
 if ($validado) {
 echo "El usuario $usuario con $email ha entrado en el sistema <br>";
 //Ahora toca buscar las preguntas para ponerlas en pantalla dentro de un form
@@ -52,6 +49,9 @@ echo '<input type="submit" value="corregir">';
 echo '</FORM>';
 }
 else { echo "Usuario o contraseña incorrecto ";}
+
+
+
 
 echo '<FORM action="calificar.php" method="post">';
 //añadimos información del usuario
